@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://docs.python.org/3.6/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://docs.python.org/pt-br/3.6/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://docs.python.org/ja/3.6/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://docs.python.org/en/3.6/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://docs.python.org/zh-cn/3.6/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://docs.python.org/id/3.6/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://docs.python.org/fr/3.6/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://docs.python.org/es/3.6/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://docs.python.org/ko/3.6/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://docs.python.org/zh-tw/3.6/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://docs.python.org/pl/3.6/"/>
+    <changefreq>yearly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://docs.python.org/3.7/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://docs.python.org/pt-br/3.7/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://docs.python.org/ja/3.7/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://docs.python.org/en/3.7/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://docs.python.org/zh-cn/3.7/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://docs.python.org/id/3.7/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://docs.python.org/fr/3.7/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://docs.python.org/es/3.7/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://docs.python.org/ko/3.7/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://docs.python.org/zh-tw/3.7/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://docs.python.org/pl/3.7/"/>
+    <changefreq>yearly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://docs.python.org/3.8/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://docs.python.org/pt-br/3.8/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://docs.python.org/ja/3.8/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://docs.python.org/en/3.8/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://docs.python.org/zh-cn/3.8/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://docs.python.org/id/3.8/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://docs.python.org/fr/3.8/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://docs.python.org/es/3.8/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://docs.python.org/ko/3.8/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://docs.python.org/zh-tw/3.8/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://docs.python.org/pl/3.8/"/>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://docs.python.org/3.9/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://docs.python.org/pt-br/3.9/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://docs.python.org/ja/3.9/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://docs.python.org/en/3.9/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://docs.python.org/zh-cn/3.9/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://docs.python.org/id/3.9/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://docs.python.org/fr/3.9/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://docs.python.org/es/3.9/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://docs.python.org/ko/3.9/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://docs.python.org/zh-tw/3.9/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://docs.python.org/pl/3.9/"/>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://docs.python.org/3.10/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://docs.python.org/pt-br/3.10/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://docs.python.org/ja/3.10/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://docs.python.org/en/3.10/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://docs.python.org/zh-cn/3.10/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://docs.python.org/id/3.10/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://docs.python.org/fr/3.10/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://docs.python.org/es/3.10/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://docs.python.org/ko/3.10/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://docs.python.org/zh-tw/3.10/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://docs.python.org/pl/3.10/"/>
+    <changefreq>daily</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://docs.python.org/3/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://docs.python.org/pt-br/3/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://docs.python.org/ja/3/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://docs.python.org/en/3/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://docs.python.org/zh-cn/3/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://docs.python.org/id/3/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://docs.python.org/fr/3/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://docs.python.org/es/3/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://docs.python.org/ko/3/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://docs.python.org/zh-tw/3/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://docs.python.org/pl/3/"/>
+    <changefreq>daily</changefreq>
+  </url>
+</urlset>
