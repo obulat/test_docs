@@ -439,7 +439,7 @@ dl > dt span ~ em {
     .version_switcher_placeholder::after {
         content: url('../_static/caret-down.svg');
         position: absolute;
-        top: 7px;
+        top: 5px;
         width: 15px;
         height: 15px;
         right: 3px;
