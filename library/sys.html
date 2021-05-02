@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>sys — System-specific parameters and functions &#8212; Python 3.9.4 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -30,7 +30,6 @@
     <link rel="canonical" href="https://docs.python.org/3/library/sys.html" />
     
       
-      <script type="text/javascript" src="../_static/switchers.js"></script>
       
     
 
@@ -108,14 +107,17 @@
           <a href="python.html" title="Python Runtime Services"
              accesskey="P">previous</a> |</li>
 
-                <li><img src="../_static/py.svg" alt=""
-                    style="vertical-align: middle; margin-top: -1px"/></li>
-                <li><a href="https://www.python.org/">Python</a> &#187;</li>
-                    
+          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+          </li>
     <li>
-      <span class="language_switcher_placeholder">en</span>
-      <span class="version_switcher_placeholder">3.9.4</span>
-      <a href="../index.html">Documentation </a> &#187;
+      <a href="../index.html">3.9.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -166,11 +168,11 @@ removed).</p>
 <dt id="sys.addaudithook">
 <code class="sig-prename descclassname">sys.</code><code class="sig-name descname">addaudithook</code><span class="sig-paren">(</span><em class="sig-param">hook</em><span class="sig-paren">)</span><a class="headerlink" href="#sys.addaudithook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Append the callable <em>hook</em> to the list of active auditing hooks for the
-current interpreter.</p>
+current (sub)interpreter.</p>
 <p>When an auditing event is raised through the <a class="reference internal" href="#sys.audit" title="sys.audit"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.audit()</span></code></a> function, each
 hook will be called in the order it was added with the event name and the
 tuple of arguments. Native hooks added by <a class="reference internal" href="../c-api/sys.html#c.PySys_AddAuditHook" title="PySys_AddAuditHook"><code class="xref c c-func docutils literal notranslate"><span class="pre">PySys_AddAuditHook()</span></code></a> are
-called first, followed by hooks added in the current interpreter.  Hooks
+called first, followed by hooks added in the current (sub)interpreter.  Hooks
 can then log the event, raise an exception to abort the operation,
 or terminate the process entirely.</p>
 <p class="audit-hook"><p>Calling <a class="reference internal" href="#sys.addaudithook" title="sys.addaudithook"><code class="xref py py-func docutils literal notranslate"><span class="pre">sys.addaudithook()</span></code></a> will itself raise an auditing event
@@ -991,10 +993,16 @@ a domain controller.</p></td>
 <p>This function wraps the Win32 <code class="xref c c-func docutils literal notranslate"><span class="pre">GetVersionEx()</span></code> function; see the
 Microsoft documentation on <code class="xref c c-func docutils literal notranslate"><span class="pre">OSVERSIONINFOEX()</span></code> for more information
 about these fields.</p>
-<p><em>platform_version</em> returns the accurate major version, minor version and
+<p><em>platform_version</em> returns the major version, minor version and
 build number of the current operating system, rather than the version that
 is being emulated for the process. It is intended for use in logging rather
 than for feature detection.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>platform_version</em> derives the version from kernel32.dll which can be of a different
+version than the OS version. Please use <a class="reference internal" href="platform.html#module-platform" title="platform: Retrieves as much platform identifying data as possible."><code class="xref py py-mod docutils literal notranslate"><span class="pre">platform</span></code></a> module for achieving accurate
+OS version.</p>
+</div>
 <p class="availability"><a class="reference internal" href="intro.html#availability"><span class="std std-ref">Availability</span></a>: Windows.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 3.2: </span>Changed to a named tuple and added <em>service_pack_minor</em>,
@@ -2010,14 +2018,17 @@ means, or not at all.</p>
           <a href="python.html" title="Python Runtime Services"
              >previous</a> |</li>
 
-                <li><img src="../_static/py.svg" alt=""
-                    style="vertical-align: middle; margin-top: -1px"/></li>
-                <li><a href="https://www.python.org/">Python</a> &#187;</li>
-                    
+          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+          </li>
     <li>
-      <span class="language_switcher_placeholder">en</span>
-      <span class="version_switcher_placeholder">3.9.4</span>
-      <a href="../index.html">Documentation </a> &#187;
+      <a href="../index.html">3.9.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -2041,13 +2052,19 @@ means, or not at all.</p>
     <div class="footer">
     &copy; <a href="../copyright.html">Copyright</a> 2001-2021, Python Software Foundation.
     <br />
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br />
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br />
+    See <a href="">History and License</a> for more information.
+    <br /><br />
 
     The Python Software Foundation is a non-profit corporation.
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
 
-    Last updated on Apr 13, 2021.
+    Last updated on May 02, 2021.
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 

@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>argparse — Parser for command-line options, arguments and sub-commands &#8212; Python 3.9.4 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -30,7 +30,6 @@
     <link rel="canonical" href="https://docs.python.org/3/library/argparse.html" />
     
       
-      <script type="text/javascript" src="../_static/switchers.js"></script>
       
     
 
@@ -175,14 +174,17 @@
           <a href="time.html" title="time — Time access and conversions"
              accesskey="P">previous</a> |</li>
 
-                <li><img src="../_static/py.svg" alt=""
-                    style="vertical-align: middle; margin-top: -1px"/></li>
-                <li><a href="https://www.python.org/">Python</a> &#187;</li>
-                    
+          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+          </li>
     <li>
-      <span class="language_switcher_placeholder">en</span>
-      <span class="version_switcher_placeholder">3.9.4</span>
-      <a href="../index.html">Documentation </a> &#187;
+      <a href="../index.html">3.9.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -805,7 +807,7 @@ the help options:</p>
 <h3>exit_on_error<a class="headerlink" href="#exit-on-error" title="Permalink to this headline">¶</a></h3>
 <p>Normally, when you pass an invalid argument list to the <a class="reference internal" href="#argparse.ArgumentParser.parse_args" title="argparse.ArgumentParser.parse_args"><code class="xref py py-meth docutils literal notranslate"><span class="pre">parse_args()</span></code></a>
 method of an <a class="reference internal" href="#argparse.ArgumentParser" title="argparse.ArgumentParser"><code class="xref py py-class docutils literal notranslate"><span class="pre">ArgumentParser</span></code></a>, it will exit with error info.</p>
-<p>If the user would like catch errors manually, the feature can be enable by setting
+<p>If the user would like to catch errors manually, the feature can be enabled by setting
 <code class="docutils literal notranslate"><span class="pre">exit_on_error</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code>:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">exit_on_error</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--integers&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
@@ -1003,7 +1005,7 @@ overriding the <code class="docutils literal notranslate"><span class="pre">__ca
 <span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">option_strings</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">if</span> <span class="n">nargs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;nargs not allowed&quot;</span><span class="p">)</span>
-<span class="gp">... </span>        <span class="nb">super</span><span class="p">(</span><span class="n">FooAction</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">option_strings</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="gp">... </span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">option_strings</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 <span class="gp">... </span>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parser</span><span class="p">,</span> <span class="n">namespace</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">option_string</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%r</span><span class="s1"> </span><span class="si">%r</span><span class="s1"> </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">namespace</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">option_string</span><span class="p">))</span>
 <span class="gp">... </span>        <span class="nb">setattr</span><span class="p">(</span><span class="n">namespace</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dest</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
@@ -2378,14 +2380,17 @@ the standard Python syntax to use dictionaries to format strings, that is,
           <a href="time.html" title="time — Time access and conversions"
              >previous</a> |</li>
 
-                <li><img src="../_static/py.svg" alt=""
-                    style="vertical-align: middle; margin-top: -1px"/></li>
-                <li><a href="https://www.python.org/">Python</a> &#187;</li>
-                    
+          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+          </li>
     <li>
-      <span class="language_switcher_placeholder">en</span>
-      <span class="version_switcher_placeholder">3.9.4</span>
-      <a href="../index.html">Documentation </a> &#187;
+      <a href="../index.html">3.9.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -2409,13 +2414,19 @@ the standard Python syntax to use dictionaries to format strings, that is,
     <div class="footer">
     &copy; <a href="../copyright.html">Copyright</a> 2001-2021, Python Software Foundation.
     <br />
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br />
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br />
+    See <a href="">History and License</a> for more information.
+    <br /><br />
 
     The Python Software Foundation is a non-profit corporation.
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
 
-    Last updated on Apr 13, 2021.
+    Last updated on May 02, 2021.
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 

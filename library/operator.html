@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>operator — Standard operators as functions &#8212; Python 3.9.4 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -30,7 +30,6 @@
     <link rel="canonical" href="https://docs.python.org/3/library/operator.html" />
     
       
-      <script type="text/javascript" src="../_static/switchers.js"></script>
       
     
 
@@ -117,14 +116,17 @@
           <a href="functools.html" title="functools — Higher-order functions and operations on callable objects"
              accesskey="P">previous</a> |</li>
 
-                <li><img src="../_static/py.svg" alt=""
-                    style="vertical-align: middle; margin-top: -1px"/></li>
-                <li><a href="https://www.python.org/">Python</a> &#187;</li>
-                    
+          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+          </li>
     <li>
-      <span class="language_switcher_placeholder">en</span>
-      <span class="version_switcher_placeholder">3.9.4</span>
-      <a href="../index.html">Documentation </a> &#187;
+      <a href="../index.html">3.9.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -516,17 +518,13 @@ returns a tuple of lookup values.  For example:</p>
 <p>The items can be any type accepted by the operand’s <a class="reference internal" href="#operator.__getitem__" title="operator.__getitem__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__getitem__()</span></code></a>
 method.  Dictionaries accept any hashable value.  Lists, tuples, and
 strings accept an index or a slice:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">itemgetter</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;tu&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">})</span>
-<span class="go">&#39;tu&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="s1">&#39;ABCDEFG&#39;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="s1">&#39;ABCDEFG&#39;</span><span class="p">)</span>
 <span class="go">&#39;B&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)(</span><span class="s1">&#39;ABCDEFG&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)(</span><span class="s1">&#39;ABCDEFG&#39;</span><span class="p">)</span>
 <span class="go">(&#39;B&#39;, &#39;D&#39;, &#39;F&#39;)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">itemgetter</span><span class="p">(</span><span class="nb">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="kc">None</span><span class="p">))(</span><span class="s1">&#39;ABCDEFG&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">itemgetter</span><span class="p">(</span><span class="nb">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="kc">None</span><span class="p">))(</span><span class="s1">&#39;ABCDEFG&#39;</span><span class="p">)</span>
 <span class="go">&#39;CDEFG&#39;</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">soldier</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">rank</span><span class="o">=</span><span class="s1">&#39;captain&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;dotterbart&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">soldier</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">rank</span><span class="o">=</span><span class="s1">&#39;captain&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;dotterbart&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">itemgetter</span><span class="p">(</span><span class="s1">&#39;rank&#39;</span><span class="p">)(</span><span class="n">soldier</span><span class="p">)</span>
 <span class="go">&#39;captain&#39;</span>
 </pre></div>
@@ -923,14 +921,17 @@ will perform the update, so no subsequent assignment is necessary:</p>
           <a href="functools.html" title="functools — Higher-order functions and operations on callable objects"
              >previous</a> |</li>
 
-                <li><img src="../_static/py.svg" alt=""
-                    style="vertical-align: middle; margin-top: -1px"/></li>
-                <li><a href="https://www.python.org/">Python</a> &#187;</li>
-                    
+          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+          </li>
     <li>
-      <span class="language_switcher_placeholder">en</span>
-      <span class="version_switcher_placeholder">3.9.4</span>
-      <a href="../index.html">Documentation </a> &#187;
+      <a href="../index.html">3.9.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -954,13 +955,19 @@ will perform the update, so no subsequent assignment is necessary:</p>
     <div class="footer">
     &copy; <a href="../copyright.html">Copyright</a> 2001-2021, Python Software Foundation.
     <br />
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br />
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br />
+    See <a href="">History and License</a> for more information.
+    <br /><br />
 
     The Python Software Foundation is a non-profit corporation.
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
 
-    Last updated on Apr 13, 2021.
+    Last updated on May 02, 2021.
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 

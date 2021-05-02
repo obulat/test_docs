@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Context Variables Objects &#8212; Python 3.9.4 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -30,7 +30,6 @@
     <link rel="canonical" href="https://docs.python.org/3/c-api/contextvars.html" />
     
       
-      <script type="text/javascript" src="../_static/switchers.js"></script>
       
     
 
@@ -108,14 +107,17 @@
           <a href="coro.html" title="Coroutine Objects"
              accesskey="P">previous</a> |</li>
 
-                <li><img src="../_static/py.svg" alt=""
-                    style="vertical-align: middle; margin-top: -1px"/></li>
-                <li><a href="https://www.python.org/">Python</a> &#187;</li>
-                    
+          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+          </li>
     <li>
-      <span class="language_switcher_placeholder">en</span>
-      <span class="version_switcher_placeholder">3.9.4</span>
-      <a href="../index.html">Documentation </a> &#187;
+      <a href="../index.html">3.9.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API Reference Manual</a> &#187;</li>
@@ -267,9 +269,9 @@ and <code class="docutils literal notranslate"><span class="pre">-1</span></code
 <dt id="c.PyContextVar_New">
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a> *<code class="sig-name descname">PyContextVar_New</code><span class="sig-paren">(</span>const char<em> *name</em>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a><em> *def</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyContextVar_New" title="Permalink to this definition">¶</a></dt>
 <dd><em class="refcount">Return value: New reference.</em><p>Create a new <code class="docutils literal notranslate"><span class="pre">ContextVar</span></code> object.  The <em>name</em> parameter is used
-for introspection and debug purposes.  The <em>def</em> parameter may optionally
-specify the default value for the context variable.  If an error has
-occurred, this function returns <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
+for introspection and debug purposes.  The <em>def</em> parameter specifies
+a default value for the context variable, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code> for no default.
+If an error has occurred, this function returns <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
@@ -285,15 +287,14 @@ If the context variable was <em>not</em> found, <em>value</em> will point to:</p
 <li><p>the default value of <em>var</em>, if not <code class="docutils literal notranslate"><span class="pre">NULL</span></code>;</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">NULL</span></code></p></li>
 </ul>
-<p>If the value was found, the function will create a new reference to it.</p>
+<p>Except for <code class="docutils literal notranslate"><span class="pre">NULL</span></code>, the function returns a new reference.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="c.PyContextVar_Set">
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a> *<code class="sig-name descname">PyContextVar_Set</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a><em> *var</em>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a><em> *value</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyContextVar_Set" title="Permalink to this definition">¶</a></dt>
-<dd><em class="refcount">Return value: New reference.</em><p>Set the value of <em>var</em> to <em>value</em> in the current context.  Returns a
-pointer to a <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyObject</span></code></a> object, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code> if an error
-has occurred.</p>
+<dd><em class="refcount">Return value: New reference.</em><p>Set the value of <em>var</em> to <em>value</em> in the current context.  Returns
+a new token object for this change, or <code class="docutils literal notranslate"><span class="pre">NULL</span></code> if an error has occurred.</p>
 </dd></dl>
 
 <dl class="function">
@@ -349,14 +350,17 @@ This function returns <code class="docutils literal notranslate"><span class="pr
           <a href="coro.html" title="Coroutine Objects"
              >previous</a> |</li>
 
-                <li><img src="../_static/py.svg" alt=""
-                    style="vertical-align: middle; margin-top: -1px"/></li>
-                <li><a href="https://www.python.org/">Python</a> &#187;</li>
-                    
+          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+          </li>
     <li>
-      <span class="language_switcher_placeholder">en</span>
-      <span class="version_switcher_placeholder">3.9.4</span>
-      <a href="../index.html">Documentation </a> &#187;
+      <a href="../index.html">3.9.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API Reference Manual</a> &#187;</li>
@@ -380,13 +384,19 @@ This function returns <code class="docutils literal notranslate"><span class="pr
     <div class="footer">
     &copy; <a href="../copyright.html">Copyright</a> 2001-2021, Python Software Foundation.
     <br />
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br />
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br />
+    See <a href="">History and License</a> for more information.
+    <br /><br />
 
     The Python Software Foundation is a non-profit corporation.
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
 
-    Last updated on Apr 13, 2021.
+    Last updated on May 02, 2021.
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 

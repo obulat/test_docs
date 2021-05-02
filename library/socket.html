@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>socket — Low-level networking interface &#8212; Python 3.9.4 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -30,7 +30,6 @@
     <link rel="canonical" href="https://docs.python.org/3/library/socket.html" />
     
       
-      <script type="text/javascript" src="../_static/switchers.js"></script>
       
     
 
@@ -133,14 +132,17 @@
           <a href="asyncio-dev.html" title="Developing with asyncio"
              accesskey="P">previous</a> |</li>
 
-                <li><img src="../_static/py.svg" alt=""
-                    style="vertical-align: middle; margin-top: -1px"/></li>
-                <li><a href="https://www.python.org/">Python</a> &#187;</li>
-                    
+          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+          </li>
     <li>
-      <span class="language_switcher_placeholder">en</span>
-      <span class="version_switcher_placeholder">3.9.4</span>
-      <a href="../index.html">Documentation </a> &#187;
+      <a href="../index.html">3.9.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -1373,6 +1375,34 @@ interface index number.
 </div>
 </dd></dl>
 
+<dl class="function">
+<dt id="socket.send_fds">
+<code class="sig-prename descclassname">socket.</code><code class="sig-name descname">send_fds</code><span class="sig-paren">(</span><em class="sig-param">sock</em>, <em class="sig-param">buffers</em>, <em class="sig-param">fds</em><span class="optional">[</span>, <em class="sig-param">flags</em><span class="optional">[</span>, <em class="sig-param">address</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#socket.send_fds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send the list of file descriptors <em>fds</em> over an <a class="reference internal" href="#socket.AF_UNIX" title="socket.AF_UNIX"><code class="xref py py-const docutils literal notranslate"><span class="pre">AF_UNIX</span></code></a> socket <em>sock</em>.
+The <em>fds</em> parameter is a sequence of file descriptors.
+Consult <code class="xref py py-meth docutils literal notranslate"><span class="pre">sendmsg()</span></code> for the documentation of these parameters.</p>
+<p class="availability"><a class="reference internal" href="intro.html#availability"><span class="std std-ref">Availability</span></a>: Unix supporting <a class="reference internal" href="#socket.socket.sendmsg" title="socket.socket.sendmsg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sendmsg()</span></code></a> and <code class="xref py py-const docutils literal notranslate"><span class="pre">SCM_RIGHTS</span></code> mechanism.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 3.9.</span></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="socket.recv_fds">
+<code class="sig-prename descclassname">socket.</code><code class="sig-name descname">recv_fds</code><span class="sig-paren">(</span><em class="sig-param">sock</em>, <em class="sig-param">bufsize</em>, <em class="sig-param">maxfds</em><span class="optional">[</span>, <em class="sig-param">flags</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#socket.recv_fds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive up to <em>maxfds</em> file descriptors from an <a class="reference internal" href="#socket.AF_UNIX" title="socket.AF_UNIX"><code class="xref py py-const docutils literal notranslate"><span class="pre">AF_UNIX</span></code></a> socket <em>sock</em>.
+Return <code class="docutils literal notranslate"><span class="pre">(msg,</span> <span class="pre">list(fds),</span> <span class="pre">flags,</span> <span class="pre">addr)</span></code>.
+Consult <code class="xref py py-meth docutils literal notranslate"><span class="pre">recvmsg()</span></code> for the documentation of these parameters.</p>
+<p class="availability"><a class="reference internal" href="intro.html#availability"><span class="std std-ref">Availability</span></a>: Unix supporting <a class="reference internal" href="#socket.socket.recvmsg" title="socket.socket.recvmsg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">recvmsg()</span></code></a> and <code class="xref py py-const docutils literal notranslate"><span class="pre">SCM_RIGHTS</span></code> mechanism.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 3.9.</span></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Any truncated integers at the end of the list of file descriptors.</p>
+</div>
+</dd></dl>
+
 </section>
 </section>
 </section>
@@ -1886,33 +1916,6 @@ Set mode, IV, AEAD associated data length and flags for <a class="reference inte
 </dd></dl>
 
 <dl class="method">
-<dt id="socket.socket.send_fds">
-<code class="sig-prename descclassname">socket.</code><code class="sig-name descname">send_fds</code><span class="sig-paren">(</span><em class="sig-param">sock</em>, <em class="sig-param">buffers</em>, <em class="sig-param">fds</em><span class="optional">[</span>, <em class="sig-param">flags</em><span class="optional">[</span>, <em class="sig-param">address</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#socket.socket.send_fds" title="Permalink to this definition">¶</a></dt>
-<dd><p>Send the list of file descriptors <em>fds</em> over an <a class="reference internal" href="#socket.AF_UNIX" title="socket.AF_UNIX"><code class="xref py py-const docutils literal notranslate"><span class="pre">AF_UNIX</span></code></a> socket.
-The <em>fds</em> parameter is a sequence of file descriptors.
-Consult <a class="reference internal" href="#socket.socket.sendmsg" title="socket.socket.sendmsg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sendmsg()</span></code></a> for the documentation of these parameters.</p>
-<p class="availability"><a class="reference internal" href="intro.html#availability"><span class="std std-ref">Availability</span></a>: Unix supporting <a class="reference internal" href="#socket.socket.sendmsg" title="socket.socket.sendmsg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sendmsg()</span></code></a> and <code class="xref py py-const docutils literal notranslate"><span class="pre">SCM_RIGHTS</span></code> mechanism.</p>
-<div class="versionadded">
-<p><span class="versionmodified added">New in version 3.9.</span></p>
-</div>
-</dd></dl>
-
-<dl class="method">
-<dt id="socket.socket.recv_fds">
-<code class="sig-prename descclassname">socket.</code><code class="sig-name descname">recv_fds</code><span class="sig-paren">(</span><em class="sig-param">sock</em>, <em class="sig-param">bufsize</em>, <em class="sig-param">maxfds</em><span class="optional">[</span>, <em class="sig-param">flags</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#socket.socket.recv_fds" title="Permalink to this definition">¶</a></dt>
-<dd><p>Receive up to <em>maxfds</em> file descriptors. Return <code class="docutils literal notranslate"><span class="pre">(msg,</span> <span class="pre">list(fds),</span> <span class="pre">flags,</span> <span class="pre">addr)</span></code>. Consult
-<a class="reference internal" href="#socket.socket.recvmsg" title="socket.socket.recvmsg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">recvmsg()</span></code></a> for the documentation of these parameters.</p>
-<p class="availability"><a class="reference internal" href="intro.html#availability"><span class="std std-ref">Availability</span></a>: Unix supporting <a class="reference internal" href="#socket.socket.recvmsg" title="socket.socket.recvmsg"><code class="xref py py-meth docutils literal notranslate"><span class="pre">recvmsg()</span></code></a> and <code class="xref py py-const docutils literal notranslate"><span class="pre">SCM_RIGHTS</span></code> mechanism.</p>
-<div class="versionadded">
-<p><span class="versionmodified added">New in version 3.9.</span></p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Any truncated integers at the end of the list of file descriptors.</p>
-</div>
-</dd></dl>
-
-<dl class="method">
 <dt id="socket.socket.sendfile">
 <code class="sig-prename descclassname">socket.</code><code class="sig-name descname">sendfile</code><span class="sig-paren">(</span><em class="sig-param">file</em>, <em class="sig-param">offset=0</em>, <em class="sig-param">count=None</em><span class="sig-paren">)</span><a class="headerlink" href="#socket.socket.sendfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send a file until EOF is reached by using high-performance
@@ -2386,14 +2389,17 @@ want to refer to <span class="target" id="index-15"></span><a class="rfc referen
           <a href="asyncio-dev.html" title="Developing with asyncio"
              >previous</a> |</li>
 
-                <li><img src="../_static/py.svg" alt=""
-                    style="vertical-align: middle; margin-top: -1px"/></li>
-                <li><a href="https://www.python.org/">Python</a> &#187;</li>
-                    
+          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+          </li>
     <li>
-      <span class="language_switcher_placeholder">en</span>
-      <span class="version_switcher_placeholder">3.9.4</span>
-      <a href="../index.html">Documentation </a> &#187;
+      <a href="../index.html">3.9.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >The Python Standard Library</a> &#187;</li>
@@ -2417,13 +2423,19 @@ want to refer to <span class="target" id="index-15"></span><a class="rfc referen
     <div class="footer">
     &copy; <a href="../copyright.html">Copyright</a> 2001-2021, Python Software Foundation.
     <br />
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br />
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br />
+    See <a href="">History and License</a> for more information.
+    <br /><br />
 
     The Python Software Foundation is a non-profit corporation.
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
 
-    Last updated on Apr 13, 2021.
+    Last updated on May 02, 2021.
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 

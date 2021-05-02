@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>What’s New In Python 3.9 &#8212; Python 3.9.4 documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -30,7 +30,6 @@
     <link rel="canonical" href="https://docs.python.org/3/whatsnew/3.9.html" />
     
       
-      <script type="text/javascript" src="../_static/switchers.js"></script>
       
     
 
@@ -197,14 +196,17 @@
           <a href="index.html" title="What’s New in Python"
              accesskey="P">previous</a> |</li>
 
-                <li><img src="../_static/py.svg" alt=""
-                    style="vertical-align: middle; margin-top: -1px"/></li>
-                <li><a href="https://www.python.org/">Python</a> &#187;</li>
-                    
+          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+          </li>
     <li>
-      <span class="language_switcher_placeholder">en</span>
-      <span class="version_switcher_placeholder">3.9.4</span>
-      <a href="../index.html">Documentation </a> &#187;
+      <a href="../index.html">3.9.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">What’s New in Python</a> &#187;</li>
@@ -237,7 +239,7 @@
 <dd class="field-odd"><p>3.9.4</p>
 </dd>
 <dt class="field-even">Date</dt>
-<dd class="field-even"><p>April 13, 2021</p>
+<dd class="field-even"><p>May 02, 2021</p>
 </dd>
 <dt class="field-odd">Editor</dt>
 <dd class="field-odd"><p>Łukasz Langa</p>
@@ -653,6 +655,9 @@ dict.  (Contributed by Inada Naoki in <a class="reference external" href="https:
 <p>Scoped IPv6 addresses can be parsed using <a class="reference internal" href="../library/ipaddress.html#ipaddress.IPv6Address" title="ipaddress.IPv6Address"><code class="xref py py-class docutils literal notranslate"><span class="pre">ipaddress.IPv6Address</span></code></a>.
 If present, scope zone ID is available through the <a class="reference internal" href="../library/ipaddress.html#ipaddress.IPv6Address.scope_id" title="ipaddress.IPv6Address.scope_id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">scope_id</span></code></a> attribute.
 (Contributed by Oleksandr Pavliuk in <a class="reference external" href="https://bugs.python.org/issue34788">bpo-34788</a>.)</p>
+<p>Starting with Python 3.9.5 the <a class="reference internal" href="../library/ipaddress.html#module-ipaddress" title="ipaddress: IPv4/IPv6 manipulation library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ipaddress</span></code></a> module no longer
+accepts any leading zeros in IPv4 address strings.
+(Contributed by Christian Heimes in <a class="reference external" href="https://bugs.python.org/issue36384">bpo-36384</a>).</p>
 </section>
 <section id="math">
 <h3>math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h3>
@@ -751,8 +756,8 @@ constant on Linux 4.1 and greater.
 (Contributed by Stefan Tatschner and Zackery Spytz in <a class="reference external" href="https://bugs.python.org/issue25780">bpo-25780</a>.)</p>
 <p>The socket module now supports the <a class="reference internal" href="../library/socket.html#socket.CAN_J1939" title="socket.CAN_J1939"><code class="xref py py-data docutils literal notranslate"><span class="pre">CAN_J1939</span></code></a> protocol on
 platforms that support it.  (Contributed by Karl Ding in <a class="reference external" href="https://bugs.python.org/issue40291">bpo-40291</a>.)</p>
-<p>The socket module now has the <code class="xref py py-func docutils literal notranslate"><span class="pre">socket.send_fds()</span></code> and
-<code class="xref py py-func docutils literal notranslate"><span class="pre">socket.recv.fds()</span></code> methods. (Contributed by Joannah Nanjekye, Shinya
+<p>The socket module now has the <a class="reference internal" href="../library/socket.html#socket.send_fds" title="socket.send_fds"><code class="xref py py-func docutils literal notranslate"><span class="pre">socket.send_fds()</span></code></a> and
+<a class="reference internal" href="../library/socket.html#socket.recv_fds" title="socket.recv_fds"><code class="xref py py-func docutils literal notranslate"><span class="pre">socket.recv_fds()</span></code></a> functions. (Contributed by Joannah Nanjekye, Shinya
 Okano and Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue28724">bpo-28724</a>.)</p>
 </section>
 <section id="time">
@@ -1132,6 +1137,18 @@ instead of raising a <a class="reference internal" href="../library/exceptions.h
 instance of <code class="docutils literal notranslate"><span class="pre">str</span></code> or <a class="reference internal" href="../library/pathlib.html#pathlib.PurePath" title="pathlib.PurePath"><code class="xref py py-class docutils literal notranslate"><span class="pre">PurePath</span></code></a>.  This allows creating
 compatible classes that don’t inherit from those mentioned types.
 (Contributed by Roger Aiudi in <a class="reference external" href="https://bugs.python.org/issue34775">bpo-34775</a>).</p></li>
+<li><p>Starting with Python 3.9.5 the <a class="reference internal" href="../library/ipaddress.html#module-ipaddress" title="ipaddress: IPv4/IPv6 manipulation library."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ipaddress</span></code></a> module no longer
+accepts any leading zeros in IPv4 address strings. Leading zeros are
+ambiguous and interpreted as octal notation by some libraries. For example
+the legacy function <a class="reference internal" href="../library/socket.html#socket.inet_aton" title="socket.inet_aton"><code class="xref py py-func docutils literal notranslate"><span class="pre">socket.inet_aton()</span></code></a> treats leading zeros as octal
+notatation. glibc implementation of modern <a class="reference internal" href="../library/socket.html#socket.inet_pton" title="socket.inet_pton"><code class="xref py py-func docutils literal notranslate"><span class="pre">inet_pton()</span></code></a> does
+not accept any leading zeros.
+(Contributed by Christian Heimes in <a class="reference external" href="https://bugs.python.org/issue36384">bpo-36384</a>).</p></li>
+<li><p><a class="reference internal" href="../library/codecs.html#codecs.lookup" title="codecs.lookup"><code class="xref py py-func docutils literal notranslate"><span class="pre">codecs.lookup()</span></code></a> now normalizes the encoding name the same way as
+<code class="xref py py-func docutils literal notranslate"><span class="pre">encodings.normalize_encoding()</span></code>, except that <a class="reference internal" href="../library/codecs.html#codecs.lookup" title="codecs.lookup"><code class="xref py py-func docutils literal notranslate"><span class="pre">codecs.lookup()</span></code></a> also
+converts the name to lower case. For example, <code class="docutils literal notranslate"><span class="pre">&quot;latex+latin1&quot;</span></code> encoding
+name is now normalized to <code class="docutils literal notranslate"><span class="pre">&quot;latex_latin1&quot;</span></code>.
+(Contributed by Jordon Xu in <a class="reference external" href="https://bugs.python.org/issue37751">bpo-37751</a>.)</p></li>
 </ul>
 </section>
 <section id="changes-in-the-c-api">
@@ -1663,14 +1680,17 @@ attribute on your FTP instance to <code class="docutils literal notranslate"><sp
           <a href="index.html" title="What’s New in Python"
              >previous</a> |</li>
 
-                <li><img src="../_static/py.svg" alt=""
-                    style="vertical-align: middle; margin-top: -1px"/></li>
-                <li><a href="https://www.python.org/">Python</a> &#187;</li>
-                    
+          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+          </li>
     <li>
-      <span class="language_switcher_placeholder">en</span>
-      <span class="version_switcher_placeholder">3.9.4</span>
-      <a href="../index.html">Documentation </a> &#187;
+      <a href="../index.html">3.9.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >What’s New in Python</a> &#187;</li>
@@ -1693,13 +1713,19 @@ attribute on your FTP instance to <code class="docutils literal notranslate"><sp
     <div class="footer">
     &copy; <a href="../copyright.html">Copyright</a> 2001-2021, Python Software Foundation.
     <br />
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br />
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br />
+    See <a href="">History and License</a> for more information.
+    <br /><br />
 
     The Python Software Foundation is a non-profit corporation.
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
 
-    Last updated on Apr 13, 2021.
+    Last updated on May 02, 2021.
     <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
     <br />
 
